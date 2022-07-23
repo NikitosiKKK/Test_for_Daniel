@@ -1,0 +1,8 @@
+
+AuthorId:1	Name:Came from a water dry	Content:Coock book	Size:1 tom	Date:07/12/2022 18:27:30	Price:50	Purchases:100	Rating:0
+AuthorId:2	Name:How to run from Bear Greels	Content:Survival lessons for insects	Size:205 pages	Date:07/12/2022 18:27:30	Price:1	Purchases:1000000000	Rating:0
+AuthorId:3	Name:Give the rose to brother	Content:Glass blower lessons	Size:321 pages	Date:07/12/2022 18:27:30	Price:256	Purchases:263	Rating:0
+AuthorId:4	Name:From the heart and kidneys, and what kind of lump is this?	Content:Surgery of the CIS countries	Size:500 pages	Date:07/12/2022 18:27:30	Price:536	Purchases:23452534	Rating:0
+AuthorId:2	Name:Five minutes flight is nor...	Content:A short tutorial on how to fold a parachute	Size:page	Date:07/12/2022 18:27:30	Price:12	Purchases:0	Rating:0
+AuthorId:4	Name:Hooray remote!	Content:DHW	Size:765 pages	Date:07/12/2022 18:27:30	Price:150	Purchases:1275	Rating:0
+AuthorId:1	Name:Im not an archer, but a shooter!	Content:Psychology for women	Size:1500 pages	Date:07/12/2022 18:27:30	Price:500	Purchases:10201	Rating:0

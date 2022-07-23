@@ -1,0 +1,50 @@
+﻿@model List<Endpoins.Models.PhotoModel>
+@{
+    ViewData["Title"] = "Photo List";
+}
+
+<h2>@ViewData["Title"]</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Url</th>
+        <th>Size</th>
+        <th>Date of creation</th>
+        <th>Price</th>
+        <th>Purchases</th>
+        <th>Rating</th>
+    </tr>
+ 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AuthorId</td>
+<td>@item.Name</td>
+<td>@item.Url</td>
+<td>@item.Size</td>
+            <td>
+                @item.Date
+            </td>
+<td>@item.Price</td>
+<td>@item.Purchases</td>
+<td>@item.Rating</td>
+                   <td> <a href="https://localhost:44346/api/photo/update=@item.Name"><input type="button" value="Update Values"></a></td>
+       <td> <a href="https://localhost:44346/api/photo/updaterating=@item.Name"><input type="button" value="Give Rating"></a></td>
+        </tr>
+
+
+    }
+</table>
+
+<form asp-action="Index" asp-controller="Photo" method="post">
+    
+    <div>
+        <h2>Search</h2>
+        <div class="form-group">
+            <label for="name">Name of photo</label>
+            <input name="name" class="form-control" />
+        </div>
+        <input type="submit" class="btn btn-default" value="Search" />
+    </div>
+</form>
