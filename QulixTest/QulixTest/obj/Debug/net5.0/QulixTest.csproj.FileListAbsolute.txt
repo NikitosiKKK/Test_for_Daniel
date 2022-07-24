@@ -242,3 +242,5 @@ C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\Qul
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\QulixTest\obj\Debug\net5.0\QulixTest.pdb
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\QulixTest\obj\Debug\net5.0\QulixTest.genruntimeconfig.cache
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\QulixTest\obj\Debug\net5.0\ref\QulixTest.dll
+D:\works\qulix-test-main\QulixTest\QulixTest\bin\Debug\net5.0\DAL.dll
+D:\works\qulix-test-main\QulixTest\QulixTest\bin\Debug\net5.0\DAL.pdb

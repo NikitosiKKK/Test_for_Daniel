@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IEXzRtZeMUGS7G3/12LqbJIJ4G8FBxgFSmf/O7LjKJXMMQXkKqu7k3x+1TwpQjgGvjqhAeRQroET/eLS4lguxw==",
+  "dgSpecHash": "NTjW4ZcbsXr53g5e+zvbSIJ/DQjG1ZOV/WcRJJ79fsw12CloKhHW3FTYQl+pkZq5OJtZD1z4ctVtAn33M4GfRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\QulixTest\\QulixTest.csproj",
+  "projectFilePath": "D:\\works\\qulix-test-main\\QulixTest\\QulixTest\\QulixTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nikit\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Nikit\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

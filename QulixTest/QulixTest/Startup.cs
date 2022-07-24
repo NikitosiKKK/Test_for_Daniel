@@ -34,6 +34,8 @@ namespace QulixTest
             string connectionString = "Data source=NIKITOSRAZVEDOS; Initial Catalog=qulixtestdb;Integrated Security=True";
             services.AddTransient<IPhotoWorkDB, PhotoWorkDB>(provider => new PhotoWorkDB(connectionString));
             services.AddTransient<ITextWorkDB, TextWorkDB>(provider => new TextWorkDB(connectionString));
+            services.AddScoped<IPhotoWork, PhotoWork>();
+            services.AddScoped<ITextWork, TextWork>();
             services.AddMvc();
 
             services.AddControllers();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\DAL\\DAL.csproj": {}
+    "D:\\works\\qulix-test-main\\QulixTest\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\DAL\\DAL.csproj": {
+    "D:\\works\\qulix-test-main\\QulixTest\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\works\\qulix-test-main\\QulixTest\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\DAL\\DAL.csproj",
+        "projectPath": "D:\\works\\qulix-test-main\\QulixTest\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Nikit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikit\\Downloads\\Test_for_Daniel-main\\Test_for_Daniel-main\\QulixTest\\DAL\\obj\\",
+        "outputPath": "D:\\works\\qulix-test-main\\QulixTest\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

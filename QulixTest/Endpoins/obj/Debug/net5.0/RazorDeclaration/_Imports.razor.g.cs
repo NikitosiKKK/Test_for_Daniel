@@ -13,7 +13,7 @@ namespace Endpoins
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\Endpoins\_Imports.razor"
+#line 1 "D:\works\qulix-test-main\QulixTest\Endpoins\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default

@@ -95,3 +95,6 @@ C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\End
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\Endpoins\obj\Debug\net5.0\refint\Endpoins.dll
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\Endpoins\obj\Debug\net5.0\Endpoins.pdb
 C:\Users\Nikit\Downloads\Test_for_Daniel-main\Test_for_Daniel-main\QulixTest\Endpoins\obj\Debug\net5.0\ref\Endpoins.dll
+D:\works\qulix-test-main\QulixTest\Endpoins\bin\Debug\net5.0\DAL.dll
+D:\works\qulix-test-main\QulixTest\Endpoins\bin\Debug\net5.0\DAL.pdb
+D:\works\qulix-test-main\QulixTest\Endpoins\obj\Debug\net5.0\Endpoins.csproj.CopyComplete
