@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f1dacbd01960e5790808e9901f1581648adb1c4", @"/Views/Text/Index.cshtml")]
     #nullable restore
-    public class Views_Text_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Endpoins.Models.TextModel>>
+    public class Views_Text_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BLL.Models.TextModel>>
     #nullable disable
     {
         #pragma warning disable 1998
@@ -138,7 +138,7 @@ Write(item.Rating);
         #nullable disable
         #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Endpoins.Models.TextModel>> Html { get; private set; } = default!;
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<BLL.Models.TextModel>> Html { get; private set; } = default!;
         #nullable disable
     }
 }

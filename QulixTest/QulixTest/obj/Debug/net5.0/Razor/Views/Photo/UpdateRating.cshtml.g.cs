@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f87569a9eec8ac6743fbc4ba47a2e7121016948f", @"/Views/Photo/UpdateRating.cshtml")]
     #nullable restore
-    public class Views_Photo_UpdateRating : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Endpoins.Models.PhotoModel>
+    public class Views_Photo_UpdateRating : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BLL.Models.PhotoModel>
     #nullable disable
     {
         #line hidden
@@ -95,7 +95,7 @@ namespace AspNetCore
         #nullable disable
         #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Endpoins.Models.PhotoModel> Html { get; private set; } = default!;
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<BLL.Models.PhotoModel> Html { get; private set; } = default!;
         #nullable disable
     }
 }

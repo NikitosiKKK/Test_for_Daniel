@@ -1,20 +1,14 @@
+using BLL.Interfaces;
+using BLL.Services;
+using DAL.Interfaces;
+using DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Endpoins.Interfaces;
-using Endpoins.Mocks;
-using DAL.Interfaces;
-using DAL.Mocks;
+
 
 namespace QulixTest
 {
@@ -32,10 +26,10 @@ namespace QulixTest
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionString = "Data source=NIKITOSRAZVEDOS; Initial Catalog=qulixtestdb;Integrated Security=True";
-            services.AddTransient<IPhotoWorkDB, PhotoWorkDB>(provider => new PhotoWorkDB(connectionString));
-            services.AddTransient<ITextWorkDB, TextWorkDB>(provider => new TextWorkDB(connectionString));
-            services.AddScoped<IPhotoWork, PhotoWork>();
-            services.AddScoped<ITextWork, TextWork>();
+            services.AddTransient<IPhotoRepository, PhotoRepository>(provider => new PhotoRepository(connectionString));
+            services.AddTransient<ITextRepository, TextRepository>(provider => new TextRepository(connectionString));
+            services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<ITextService, TextService>();
             services.AddMvc();
 
             services.AddControllers();

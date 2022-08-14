@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DAL.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Endpoins.Interfaces;
-using Endpoins.Models;
 using System.Collections.Generic;
 
 namespace QulixTest.Controllers
@@ -10,8 +9,8 @@ namespace QulixTest.Controllers
     [ApiController]
     public class TextController : Controller
     {
-        ITextWork repo;
-        public TextController(ITextWork r)
+        ITextRepository repo;
+        public TextController(ITextRepository r)
         {
             repo = r;
         }
@@ -23,7 +22,7 @@ namespace QulixTest.Controllers
         }
         [HttpPost]
         public ActionResult TextText() {
-            repo.TextAll();
+            repo.GetAllText();
             return RedirectToAction("Index");
         }
     }

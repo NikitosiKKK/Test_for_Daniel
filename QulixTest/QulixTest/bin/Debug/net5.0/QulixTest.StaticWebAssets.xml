@@ -1,5 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="D:\works\qulix-test-main\QulixTest\QulixTest\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="_content/Endpoins" Path="D:\works\qulix-test-main\QulixTest\Endpoins\obj\Debug\net5.0\scopedcss\projectbundle\" />
-  <ContentRoot BasePath="_content/Endpoins" Path="D:\works\qulix-test-main\QulixTest\Endpoins\wwwroot\" />
-</StaticWebAssets>

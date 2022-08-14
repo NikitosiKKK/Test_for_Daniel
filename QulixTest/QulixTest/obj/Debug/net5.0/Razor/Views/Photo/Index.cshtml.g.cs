@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bbfe97c5a1c3bd9cac968c4267038a108d31c22e", @"/Views/Photo/Index.cshtml")]
     #nullable restore
-    public class Views_Photo_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Endpoins.Models.PhotoModel>>
+    public class Views_Photo_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BLL.Models.PhotoModel>>
     #nullable disable
     {
         #pragma warning disable 1998
@@ -175,7 +175,7 @@ WriteAttributeValue("", 832, item.Name, 832, 10, false);
         #nullable disable
         #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Endpoins.Models.PhotoModel>> Html { get; private set; } = default!;
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<BLL.Models.PhotoModel>> Html { get; private set; } = default!;
         #nullable disable
     }
 }

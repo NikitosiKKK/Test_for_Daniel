@@ -1,0 +1,15 @@
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+D:\works\qulix-test-main\QulixTest\BLL\bin\Debug\net5.0\BLL.deps.json
+D:\works\qulix-test-main\QulixTest\BLL\bin\Debug\net5.0\BLL.dll
+D:\works\qulix-test-main\QulixTest\BLL\bin\Debug\net5.0\BLL.pdb
+D:\works\qulix-test-main\QulixTest\BLL\bin\Debug\net5.0\DAL.dll
+D:\works\qulix-test-main\QulixTest\BLL\bin\Debug\net5.0\DAL.pdb
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.dll
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\refint\BLL.dll
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\BLL.pdb
+D:\works\qulix-test-main\QulixTest\BLL\obj\Debug\net5.0\ref\BLL.dll

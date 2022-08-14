@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2dea9d9b53644338338f6af231cd610533896b89", @"/Views/Photo/Details.cshtml")]
     #nullable restore
-    public class Views_Photo_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Endpoins.Models.PhotoModel>
+    public class Views_Photo_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BLL.Models.PhotoModel>
     #nullable disable
     {
         #pragma warning disable 1998
@@ -140,7 +140,7 @@ Write(Model.Rating);
         #nullable disable
         #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Endpoins.Models.PhotoModel> Html { get; private set; } = default!;
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<BLL.Models.PhotoModel> Html { get; private set; } = default!;
         #nullable disable
     }
 }

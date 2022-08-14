@@ -4,18 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Endpoins.Models;
-using Endpoins.Interfaces;
+using BLL.Models;
+using BLL.Interfaces;
+using DAL;
 
 namespace QulixTest.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("[controller]")]
     public class PhotoController : Controller
     {
-        IPhotoWork repo;
-        DBCreation dataBase = new DBCreation();
-        public PhotoController(IPhotoWork r)
+        IPhotoService repo;
+        DBWork dataBase = new DBWork();
+        public PhotoController(IPhotoService r)
         {
             repo = r;
         }
@@ -32,49 +32,49 @@ namespace QulixTest.Controllers
         {
             return RedirectToAction("Details", new { name = name });
         }
-        [HttpGet("getphotobyname={name}")]
-        public ActionResult Details(string name)
+        [HttpGet("getphotobyid={id}")]
+        public ActionResult Details(int id)
         {
-            PhotoModel photo = repo.GetPhotoByName(name);
+            PhotoModel photo = repo.GetPhoto(id);
             if (photo != null)
                 return View(photo);
             return NotFound();
         }
 
-        [HttpGet("Update={name}")]
-        public ActionResult Update(string name)
+        [HttpGet("Update={id}")]
+        public ActionResult Update(int id)
         {
-            PhotoModel photo = repo.GetPhotoByName(name);
+            PhotoModel photo = repo.GetPhoto(id);
             if (photo != null)
                 return View(photo);
             return NotFound();
         }
-        [HttpPost("Update={name}")]
-        public ActionResult Update([FromForm] PhotoModel photo, string name)
+        [HttpPost("Update={id}")]
+        public ActionResult Update([FromForm] PhotoModel photo, int id)
         {
             if (string.IsNullOrEmpty(photo.Name) || photo.Purchases == null || photo.Url == null || photo.Price == null || photo.Size == null) { return RedirectToAction("Update"); }
             else
             {
-                repo.ChangePhotoByName(photo, name);
+                repo.ChangePhoto(photo, id);
                 return RedirectToAction("Index");
             }
         }
 
-        [HttpGet("UpdateRating={name}")]
-        public ActionResult UpdateRating(string name) {
-            PhotoModel photo = repo.GetPhotoByName(name);
+        [HttpGet("UpdateRating={id}")]
+        public ActionResult UpdateRating(int id) {
+            PhotoModel photo = repo.GetPhoto(id);
             if (photo != null)
                 return View(photo);
             return NotFound();
         }
 
-        [HttpPost("UpdateRating={name}")]
-        public ActionResult UpdateRating([FromForm] PhotoModel photo, string name) {
-            if (photo.Rating > 10 || photo.Rating < 0)
+        [HttpPost("UpdateRating={id}")]
+        public ActionResult UpdateRating(int rating, int id) {
+            if (rating > 10 || rating < 0)
             {
                 return RedirectToAction("UpdateRating");
             }
-            repo.GetRating(photo, name);
+            repo.SetRating(rating, id);
             return RedirectToAction("Index");
         }
         [HttpGet("CreateDB")]
