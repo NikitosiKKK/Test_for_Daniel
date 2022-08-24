@@ -9,7 +9,6 @@ namespace BLL.Interfaces
 {
     public interface ITextService
     {
-        public List<TextModel> GetAllText();
-        public void TextAll();
+        public List<TextModel> List();
     }
 }

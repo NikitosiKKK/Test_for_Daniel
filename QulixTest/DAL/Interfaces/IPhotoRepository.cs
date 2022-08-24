@@ -1,9 +1,5 @@
-﻿using DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using DAL.Entities;
 
 namespace DAL.Interfaces
 {
@@ -11,8 +7,7 @@ namespace DAL.Interfaces
     {
         public List<PhotoEntity> List();
         public PhotoEntity Get(int id);
-        public void Update(PhotoEntity entity, int id);
-        public void SetRating(int id, int rating);
+        public void Update(PhotoEntity entity);
         public void Delete(int id);
     }
 }

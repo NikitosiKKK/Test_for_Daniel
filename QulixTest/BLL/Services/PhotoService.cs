@@ -1,42 +1,49 @@
-﻿using BLL.Interfaces;
+﻿using System.Collections.Generic;
+using System.Linq;
+using BLL.Interfaces;
 using BLL.Maps;
 using BLL.Models;
 using DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public  class PhotoService:IPhotoService
+    public class PhotoService : IPhotoService
     {
         private readonly IPhotoRepository _photoRepository;
+
         public PhotoService(IPhotoRepository photoRepository)
         {
-            _photoRepository= photoRepository;
+            _photoRepository = photoRepository;
         }
 
-        public void ChangePhoto(PhotoModel photoModel, int id)
+        public void Update(PhotoModel photoModel, int id)
         {
-            _photoRepository.Update(PhotoMap.Map(photoModel), id);
+            var photoEntity = PhotoMap.Map(photoModel);
+            _photoRepository.Update(photoEntity);
         }
 
-        public PhotoModel GetPhoto(int id)
+        public PhotoModel Get(int id)
         {
-            return PhotoMap.Map(_photoRepository.Get(id));
-        }
-
-        public List<PhotoModel> GetPhotos()
-        {
+            var photoEntity = _photoRepository.Get(id);
             
-            return PhotoMap.Maps(_photoRepository.List()); ;
+            return PhotoMap.Map(photoEntity);
+        }
+
+        public List<PhotoModel> List()
+        {
+            var photoEntities = _photoRepository.List();
+
+            var photoModels = photoEntities.Select(p => PhotoMap.Map(p));
+            return photoModels.ToList();
         }
 
         public void SetRating(int rating, int id)
         {
-            _photoRepository.SetRating( rating, id);
+            var entity = _photoRepository.Get(id);
+
+            entity.Rating = rating;
+            
+            _photoRepository.Update(entity);
         }
     }
 }

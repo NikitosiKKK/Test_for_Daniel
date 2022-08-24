@@ -6,6 +6,5 @@ namespace DAL.Interfaces
     public interface ITextRepository
     {
         public List<TextEntity> GetAllText();
-
     }
 }
