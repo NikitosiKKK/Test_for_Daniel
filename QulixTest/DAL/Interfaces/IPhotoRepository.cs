@@ -7,7 +7,7 @@ namespace DAL.Interfaces
     {
         public List<PhotoEntity> List();
         public PhotoEntity Get(int id);
-        public void Update(PhotoEntity entity);
+        public PhotoEntity Update(PhotoEntity entity);
         public void Delete(int id);
     }
 }

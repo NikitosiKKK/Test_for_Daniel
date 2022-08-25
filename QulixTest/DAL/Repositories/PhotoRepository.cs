@@ -30,11 +30,12 @@ namespace DAL.Repositories
             return db.QuerySingleOrDefault<PhotoEntity>("SELECT * FROM Photo WHERE id = @id", new { id });
         }
 
-        public void Update(PhotoEntity entity)
+        public PhotoEntity Update(PhotoEntity entity)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
             var sqlQuery = $"UPDATE Photo SET Name = @Name, Url=@Url ,Size=@Size, Price=@Price, Purchases=@Purchases WHERE id = '{entity.Id}'";
             db.Execute(sqlQuery, entity);
+            return entity;
         }
 
         public void Delete(int id)

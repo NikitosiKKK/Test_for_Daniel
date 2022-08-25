@@ -16,10 +16,11 @@ namespace BLL.Services
             _photoRepository = photoRepository;
         }
 
-        public void Update(PhotoModel photoModel, int id)
+        public PhotoModel Update(PhotoModel photoModel)
         {
             var photoEntity = PhotoMap.Map(photoModel);
-            _photoRepository.Update(photoEntity);
+            var updatedEntity = _photoRepository.Update(photoEntity);
+            return PhotoMap.Map(updatedEntity);
         }
 
         public PhotoModel Get(int id)
@@ -37,13 +38,15 @@ namespace BLL.Services
             return photoModels.ToList();
         }
 
-        public void SetRating(int rating, int id)
+        public PhotoModel SetRating(int rating, int id)
         {
             var entity = _photoRepository.Get(id);
 
             entity.Rating = rating;
             
-            _photoRepository.Update(entity);
+            var updatedEntity = _photoRepository.Update(entity);
+            
+            return PhotoMap.Map(updatedEntity);
         }
     }
 }
