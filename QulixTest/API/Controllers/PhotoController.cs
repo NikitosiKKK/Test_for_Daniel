@@ -1,8 +1,7 @@
-﻿using BLL.Interfaces;
+﻿using System.Collections.Generic;
+using BLL.Interfaces;
 using BLL.Models;
-using DAL;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,43 +11,21 @@ namespace API.Controllers
     [ApiController]
     public class PhotoController : ControllerBase
     {
-        IPhotoService repo;
-        DBWork dataBase = new DBWork();
-        public PhotoController(IPhotoService r)
-        {
-            repo = r;
-        }
-        [HttpGet]
-        public List<PhotoModel> Index()
-        {
-            return repo.GetPhotos();
+        private readonly IPhotoService _photoService;
 
+        public PhotoController(IPhotoService photoService)
+        {
+            _photoService = photoService;
         }
 
-        [HttpGet("getphoto={id}")]
-        public PhotoModel Details(int id)
+        [HttpGet("")]
+        public ActionResult<List<PhotoModel>> List()
         {
-            return repo.GetPhoto(id);
+            var photos = _photoService.List();
+
+            return photos;
         }
 
-        [HttpPost("Update={id}")]
-        public void Update([FromForm] PhotoModel photo, int id)
-        {
-
-                repo.ChangePhoto(photo, id);
-                
-        }
-
-        [HttpPost("UpdateRating={id}")]
-        public void UpdateRating(int rating, int id)
-        {
-            repo.SetRating(rating, id);
-        }
-        [HttpGet("CreateDB")]
-        public ActionResult CreateDB()
-        {
-            dataBase.CreateDB();
-            return RedirectToAction("Index");
-        }
+        //TODO: Сделай по REST спецификации
     }
 }

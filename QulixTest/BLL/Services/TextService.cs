@@ -1,31 +1,26 @@
-﻿using BLL.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Interfaces;
-using BLL.Models;
+using BLL.Interfaces;
 using BLL.Maps;
+using BLL.Models;
+using DAL.Interfaces;
 
 namespace BLL.Services
 {
-    public class TextService:ITextService
+    public class TextService : ITextService
     {
         private readonly ITextRepository _textRepository;
+
         public TextService(ITextRepository textRepository)
         {
-            _textRepository= textRepository; 
+            _textRepository = textRepository;
         }
 
-        public List<TextModel> GetAllText()
+        public List<TextModel> List()
         {
-            return TextMap.Maps(_textRepository.GetAllText()) ;
-        }
-
-        public void TextAll()
-        {
-            throw new NotImplementedException();
+            var textEntities = _textRepository.GetAllText();
+            var textModels = textEntities.Select(t => TextMap.Map(t));
+            return textModels.ToList();
         }
     }
 }
