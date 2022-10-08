@@ -23,11 +23,13 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IPhotoRepository, PhotoRepository>();
-            services.AddTransient<ITextRepository, TextRepository>();
+            var connectionString = Configuration.GetConnectionString("DefaultDatabase");
+            
+            services.AddTransient<IPhotoRepository, PhotoRepository>(x => new PhotoRepository(connectionString));
+            services.AddTransient<ITextRepository, TextRepository>(x => new TextRepository(connectionString));
             services.AddTransient<IPhotoService, PhotoService>();
             services.AddTransient<ITextService, TextService>();
-            
+
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" }); });
         }
