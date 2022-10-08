@@ -23,9 +23,29 @@ namespace API.Controllers
         {
             var photos = _photoService.List();
 
-            return photos;
+            return Ok(photos);
         }
+        [HttpGet("id")]
+        public ActionResult<PhotoModel> PhotoModel(int id)
+        {
+            var photo = _photoService.Get(id);
 
+            return Ok(photo);
+        }
+        [HttpPost("id")]
+        public ActionResult<PhotoModel> Update(int id, PhotoUpdateModel photoModel)
+        {
+            var photo = _photoService.Update(id, photoModel);
+
+            return photo;
+        }
+        [HttpPost("setrating/id")]
+        public ActionResult<PhotoModel> SeteRating(int rating, int id)
+        {
+            var photo = _photoService.SetRating(rating, id);
+
+            return photo;
+        }
         //TODO: Сделай по REST спецификации
     }
 }

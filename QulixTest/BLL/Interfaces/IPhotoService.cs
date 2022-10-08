@@ -7,7 +7,7 @@ namespace BLL.Interfaces
     {
         public List<PhotoModel> List();
         public PhotoModel Get(int id);
-        public PhotoModel Update(PhotoModel photoModel);
+        public PhotoModel Update(int id, PhotoUpdateModel photoModel);
         public PhotoModel SetRating(int rating, int id);
     }
 }

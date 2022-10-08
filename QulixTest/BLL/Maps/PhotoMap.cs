@@ -40,5 +40,22 @@ namespace BLL.Maps
 
             return photoEntity;
         }
+        public static PhotoEntity Map(PhotoUpdateModel photo, int id)
+        {
+            var photoEntity = new PhotoEntity
+            {
+                Id = id,
+                Date = photo.Date,
+                Price = photo.Price,
+                Purchases = photo.Purchases,
+                Url = photo.Url,
+                AuthorId = photo.AuthorId,
+                Rating = photo.Rating,
+                Name = photo.Name,
+                Size = photo.Size
+            };
+
+            return photoEntity;
+        }
     }
 }

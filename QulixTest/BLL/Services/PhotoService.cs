@@ -16,9 +16,9 @@ namespace BLL.Services
             _photoRepository = photoRepository;
         }
 
-        public PhotoModel Update(PhotoModel photoModel)
+        public PhotoModel Update(int id, PhotoUpdateModel photoModel)
         {
-            var photoEntity = PhotoMap.Map(photoModel);
+            var photoEntity = PhotoMap.Map(photoModel, id);
             var updatedEntity = _photoRepository.Update(photoEntity);
             return PhotoMap.Map(updatedEntity);
         }
